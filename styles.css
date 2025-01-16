@@ -1,0 +1,156 @@
+/* CSS Variables */
+:root {
+  --font-heading: "Rubik", sans-serif; /* <weight> value from 300 to 900 */
+  --font-body: "Roboto Mono", monospace; /* <weight> value from 100 to 700 */
+  --text-color-light: white;
+  --text-color-dark: black;
+  --background-color-dark: black;
+  --background-color-light: white;
+  --feature-color-light: lightblue;
+  --feature-color-dark: blue;
+  --box-shadow-light: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --box-shadow-heavy: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+/* Global Styles */
+html,
+body,
+p {
+  margin: 0;
+}
+p {
+  color: var(--text-color-dark);
+  font-family: var(--font-body);
+  text-align: center;
+}
+section {
+  padding: 20px;
+}
+.english {
+  display: none;
+}
+a {
+  color: var(--text-color-dark);
+  text-decoration: none;
+}
+/* Navbar Styles */
+.navbar {
+  background-color: var(--feature-color-dark);
+  font-family: var(--font-body);
+}
+.navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.navbar .navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 30px;
+}
+.navbar-brand:hover {
+  color: var(--text-color-dark);
+}
+.navbar a {
+  color: var(--text-color-light);
+  font-size: 20px;
+  margin: 0 20px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: var(--text-color-dark);
+}
+
+/* Header Styles */
+header {
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h1,
+h2 {
+  color: var(--text-color-dark);
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  font-size: 60px;
+  font-family: var(--font-heading);
+  padding-top: 100px;
+}
+h2 {
+  font-size: 30px;
+  font-family: var(--font-body);
+  margin: 0 10px;
+  padding: 30px 0;
+}
+.lang-btn-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+/* Button Styles */
+.btn-standard {
+  border-radius: 10px;
+  font-family: var(--font-body);
+  margin: 50px;
+  padding: 5px 10px;
+}
+.btn-standard:hover {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+.btn-color {
+  background-color: var(--feature-color-dark);
+  border: 2px solid var(--feature-color-dark);
+  color: var(--text-color-light);
+  padding: 10px 20px;
+  width: 180px;
+  margin: 30px auto;
+}
+.btn-color:hover {
+  background-color: var(--feature-color-light);
+  border: 2px solid var(--feature-color-light);
+}
+button.english {
+  display: none;
+}
+
+/* Section 1 Styles */
+/* Section 2 Styles */
+/* Section 3 Styles */
+/* Section 4 Styles */
+
+/* Footer Styles */
+footer {
+  background-color: var(--feature-color-dark);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 100px;
+    padding-top: 180px;
+  }
+  h2 {
+    font-size: 45px;
+  }
+  p {
+    font-size: 25px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .btn-standard {
+    font-size: 30px;
+  }
+  .btn-color {
+    width: 280px;
+  }
+}
