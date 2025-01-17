@@ -33,6 +33,9 @@ a {
   color: var(--text-color-dark);
   text-decoration: none;
 }
+.underline {
+  text-decoration: underline;
+}
 /* Navbar Styles */
 .navbar {
   background-color: var(--main-color-dark);
@@ -104,6 +107,7 @@ h2 {
   background-color: var(--main-color-dark);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 50px 0;
 }
 .card {
   border: 5px solid var(--main-color-light);
@@ -112,6 +116,19 @@ h2 {
 }
 .card-img-top {
   border-radius: 15px 15px 0 0;
+}
+.undraw-container {
+  background-image: url("./images/60-lines.png");
+  padding: 40px 0;
+}
+.undraw {
+  display: block;
+  width: 200px;
+  margin: 40px auto 0 auto;
+}
+.h3-undraw {
+  padding: 20px 0 10px 0;
+  text-align: center;
 }
 
 /* Button Styles */
@@ -154,15 +171,19 @@ button.english {
   width: 80%;
 }
 .about-container {
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   width: 100%;
 }
 .about-para {
   margin: 20px auto;
   width: 90%;
 }
+.contact-btn {
+  margin: 0 auto;
+}
 
-/* Section 2 Styles */
+/* Services Styles */
+
 /* Testimonials Styles */
 .blockquote-footer {
   border-radius: 20px;
@@ -172,7 +193,10 @@ button.english {
   margin-bottom: 70px;
 }
 
-/* Section 4 Styles */
+/* Contact Styles */
+.contact-socials {
+  margin: 50px 0;
+}
 
 /* Footer Styles */
 footer {
@@ -209,10 +233,33 @@ footer a {
   .btn-color {
     width: 280px;
   }
+  .undraw-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .undraw {
+    height: 200px;
+  }
   .card-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .card {
     width: 60%;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .about-image {
+    width: 40%;
+  }
+  .about-para {
+    text-align: left;
+    margin: 0;
+    width: 45%;
+  }
+  .about-contact-btn {
+    margin: 80px 0 40px 0;
   }
 }
