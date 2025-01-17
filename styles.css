@@ -12,9 +12,10 @@
 }
 /* Global Styles */
 html,
-body,
-p {
+body {
   margin: 0;
+  padding: 0;
+  width: 100%;
 }
 p {
   color: var(--text-color-dark);
@@ -83,13 +84,13 @@ h2 {
 .logo {
   background-color: var(--main-color-dark);
   padding: 0 20px 80px 20px;
+  width: 100%;
 }
 .hero {
   background-image: url("./images/gym-leonardho.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 500px;
   padding: 20px;
 }
 .lang-btn-container {
@@ -98,6 +99,19 @@ h2 {
 }
 .gold {
   color: var(--main-color-light);
+}
+.card-container {
+  background-color: var(--main-color-dark);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.card {
+  border: 5px solid var(--main-color-light);
+  border-radius: 20px;
+  margin: 20px auto;
+}
+.card-img-top {
+  border-radius: 15px 15px 0 0;
 }
 
 /* Button Styles */
@@ -130,28 +144,49 @@ button.english {
 }
 
 /* About Styles */
+.fa-brands {
+  font-size: 60px;
+  margin: 20px 10px 10px 10px;
+}
 .about-image {
   border-radius: 20px;
   box-shadow: var(--box-shadow-heavy);
-  max-width: 600px;
+  width: 80%;
 }
 .about-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  margin: 50px auto;
+  width: 100%;
 }
+.about-para {
+  margin: 20px auto;
+  width: 90%;
+}
+
 /* Section 2 Styles */
-/* Section 3 Styles */
+/* Testimonials Styles */
+.blockquote-footer {
+  border-radius: 20px;
+  margin-top: 2px;
+}
+.testimonial {
+  margin-bottom: 70px;
+}
+
 /* Section 4 Styles */
 
 /* Footer Styles */
 footer {
-  background-color: var(--feature-color-dark);
+  background-color: var(--main-color-dark);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 20px 0;
   position: absolute;
   width: 100%;
+}
+
+footer a {
+  color: var(--main-color-light);
 }
 
 /* Media Queries */
@@ -173,5 +208,11 @@ footer {
   }
   .btn-color {
     width: 280px;
+  }
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .card {
+    width: 60%;
   }
 }

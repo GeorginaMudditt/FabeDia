@@ -65,12 +65,8 @@
                   >Testimonials</a
                 >
                 <a class="nav-link" href="#section-four">Contact</a>
-                <a class="french nav-link" href="#section-five"
-                  >Galerie d'images</a
-                >
-                <a class="english nav-link" href="#section-five"
-                  >Image gallery</a
-                >
+                <a class="french nav-link" href="#section-five">Galerie</a>
+                <a class="english nav-link" href="#section-five">Gallery</a>
               </div>
             </div>
           </div>
@@ -88,26 +84,84 @@
           <button id="englishBtn" class="btn-standard">English 🇬🇧</button>
         </div>
       </div>
+      <div class="card-container">
+        <div class="card" style="width: 90%">
+          <img
+            class="card-img-top"
+            src="./images/football-rethaferguson.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <p class="card-text">PERFORMANCE</p>
+          </div>
+        </div>
+        <div class="card" style="width: 90%">
+          <img
+            class="card-img-top"
+            src="./images/endurance-cleiton-silva.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <p class="card-text">ENDURANCE</p>
+          </div>
+        </div>
+        <div class="card" style="width: 90%">
+          <img
+            class="card-img-top"
+            src="./images/weight-loss-shvetsa.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <p class="french card-text">PERTE DE POIDS</p>
+            <p class="english card-text">WEIGHT LOSS</p>
+          </div>
+        </div>
+        <div class="card" style="width: 90%">
+          <img
+            class="card-img-top"
+            src="./images/basketball-yaroslav-shuraev.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <p class="french card-text">BIEN-ÊTRE PHYSIQUE ET MENTAL</p>
+            <p class="english card-text">PHYSICAL AND MENTAL WELLNESS</p>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <section class="about">
         <a id="section-one"></a>
         <h2 class="french">À propos</h2>
         <h2 class="english">About me</h2>
+        <div class="socials">
+          <a href="https://www.facebook.com/fabe.dia" target="_blank"
+            ><i
+              class="fa-brands fa-square-facebook fa-xl"
+              style="color: #0765ff"
+            ></i
+          ></a>
+          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank"
+            ><i
+              class="fa-brands fa-square-instagram fa-xl"
+              style="color: #e25376"
+            ></i
+          ></a>
+        </div>
         <div class="about-container">
           <img
             class="about-image img-fluid"
             src="./images/fabe2.jpg"
             alt="Fabé tying shoe laces"
           />
-          <p class="french">
+          <p class="about-para french">
             Cras dictum nunc et nisl aliquet aliquet. Nam ut nulla scelerisque,
             molestie turpis ac, dictum mauris. Pellentesque habitant morbi
             tristique senectus et netus et malesuada fames ac turpis egestas.
             Vestibulum interdum aliquam nibh, at vulputate est sollicitudin
             vitae.
           </p>
-          <p class="english">
+          <p class="about-para english">
             Cras dictum nunc et nisl aliquet aliquet. Nam ut nulla scelerisque,
             molestie turpis ac, dictum mauris. Pellentesque habitant morbi
             tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -116,26 +170,6 @@
           </p>
         </div>
 
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/xC5StTlrY0c?si=0R4RZNz43QSUtzxT"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/UJKHEMr1ssY?si=szgU3Ct01AVG1kzZ"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
         <button class="french btn-standard btn-color contact-btn">
           <a href="mailto:............."> Contactez-moi</a>
         </button>
@@ -165,18 +199,50 @@
         <a id="section-three"></a>
         <h2 class="french">Témoignages</h2>
         <h2 class="english">Testimonials</h2>
-        <p class="french">
-          Cras dictum nunc et nisl aliquet aliquet. Nam ut nulla scelerisque,
-          molestie turpis ac, dictum mauris. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Vestibulum interdum aliquam nibh, at vulputate est sollicitudin vitae.
-        </p>
-        <p class="english">
-          Cras dictum nunc et nisl aliquet aliquet. Nam ut nulla scelerisque,
-          molestie turpis ac, dictum mauris. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Vestibulum interdum aliquam nibh, at vulputate est sollicitudin vitae.
-        </p>
+        <div class="testimonial card">
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                posuere erat a ante.
+              </p>
+              <footer class="blockquote-footer">Name of person quoted</footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="testimonial card">
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                posuere erat a ante.
+              </p>
+              <footer class="blockquote-footer">Name of person quoted</footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="testimonial card">
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                posuere erat a ante.
+              </p>
+              <footer class="blockquote-footer">Name of person quoted</footer>
+            </blockquote>
+          </div>
+        </div>
+        <div class="testimonial card">
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                posuere erat a ante.
+              </p>
+              <footer class="blockquote-footer">Name of person quoted</footer>
+            </blockquote>
+          </div>
+        </div>
       </section>
       <hr />
       <section class="contact">
@@ -204,20 +270,28 @@
       <hr />
       <section class="images">
         <a id="section-five"></a>
-        <h2 class="french">Galerie d'images</h2>
-        <h2 class="english">Image gallery</h2>
-        <p class="french">
-          Cras dictum nunc et nisl aliquet aliquet. Nam ut nulla scelerisque,
-          molestie turpis ac, dictum mauris. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Vestibulum interdum aliquam nibh, at vulputate est sollicitudin vitae.
-        </p>
-        <p class="english">
-          Cras dictum nunc et nisl aliquet aliquet. Nam ut nulla scelerisque,
-          molestie turpis ac, dictum mauris. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Vestibulum interdum aliquam nibh, at vulputate est sollicitudin vitae.
-        </p>
+        <h2 class="french">Galerie</h2>
+        <h2 class="english">Gallery</h2>
+        <iframe
+          width="280"
+          height="157.5"
+          src="https://www.youtube.com/embed/xC5StTlrY0c?si=0R4RZNz43QSUtzxT"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="280"
+          height="157.5"
+          src="https://www.youtube.com/embed/UJKHEMr1ssY?si=szgU3Ct01AVG1kzZ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </section>
     </main>
     <footer>
