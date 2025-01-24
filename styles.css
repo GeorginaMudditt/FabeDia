@@ -26,6 +26,10 @@ section {
   padding: 20px;
   text-align: center;
 }
+hr {
+  margin: 0 auto;
+  max-width: 60%;
+}
 .english {
   display: none;
 }
@@ -274,7 +278,7 @@ footer a {
 /* Media Queries */
 @media (min-width: 768px) {
   p {
-    font-size: 25px;
+    font-size: 20px;
   }
   h2 {
     font-size: 40px;
