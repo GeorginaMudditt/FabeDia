@@ -65,25 +65,23 @@
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon navbar-dark"></span>
+              <span><i class="fa-solid fa-bars"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="french nav-link" href="#section-one">À propos</a>
-                <a class="english nav-link" href="#section-one">About me</a>
-                <a class="french nav-link" href="#section-two"
+                <a class="french nav-link" href="#about-me">À propos</a>
+                <a class="english nav-link" href="#about-me">About me</a>
+                <a class="french nav-link" href="#services"
                   >Entraînez-vous avec moi</a
                 >
-                <a class="english nav-link" href="#section-two"
-                  >Train with me</a
-                >
-                <a class="french nav-link" href="#section-three">Témoignages</a>
-                <a class="english nav-link" href="#section-three"
+                <a class="english nav-link" href="#services">Train with me</a>
+                <a class="french nav-link" href="#testimonials">Témoignages</a>
+                <a class="english nav-link" href="#testimonials"
                   >Testimonials</a
                 >
-                <a class="nav-link" href="#section-four">Contact</a>
-                <a class="french nav-link" href="#section-five">Galerie</a>
-                <a class="english nav-link" href="#section-five">Gallery</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="french nav-link" href="#gallery">Galerie</a>
+                <a class="english nav-link" href="#gallery">Gallery</a>
               </div>
             </div>
           </div>
@@ -95,14 +93,13 @@
       <div class="hero">
         <h2 class="gold french">Transformez votre esprit et votre corps</h2>
         <h2 class="gold english">Transform your mind and body</h2>
-        <br /><br /><br /><br />
         <div class="lang-btn-container">
-          <button id="frenchBtn" class="btn-standard">Français 🇫🇷</button>
-          <button id="englishBtn" class="btn-standard">English 🇬🇧</button>
+          <button id="frenchBtn" class="btn-standard">Français</button>
+          <button id="englishBtn" class="btn-standard">English</button>
         </div>
       </div>
       <div class="card-container">
-        <div class="card" style="width: 90%">
+        <div class="card"">
           <img
             class="card-img-top"
             src="./images/football-rethaferguson.jpg"
@@ -112,7 +109,7 @@
             <p class="card-text">PERFORMANCE</p>
           </div>
         </div>
-        <div class="card" style="width: 90%">
+        <div class="card"">
           <img
             class="card-img-top"
             src="./images/endurance-cleiton-silva.jpg"
@@ -122,7 +119,7 @@
             <p class="card-text">ENDURANCE</p>
           </div>
         </div>
-        <div class="card" style="width: 90%">
+        <div class="card"">
           <img
             class="card-img-top"
             src="./images/weight-loss-shvetsa.jpg"
@@ -133,7 +130,7 @@
             <p class="english card-text">WEIGHT LOSS</p>
           </div>
         </div>
-        <div class="card" style="width: 90%">
+        <div class="card"">
           <img
             class="card-img-top"
             src="./images/basketball-yaroslav-shuraev.jpg"
@@ -184,18 +181,27 @@
           <h3 class="h3-undraw english">Coaching at your home or workplace</h3>
         </div>
         <div>
+          <img
+            class="undraw"
+            src="./images/undraw_online-world_myxf.svg"
+            alt="training"
+          />
+          <h3 class="h3-undraw french">Coaching en ligne</h3>
+          <h3 class="h3-undraw english">Online coaching</h3>
+        </div>
+        <div>
           <img class="undraw" src="./images/undraw_team_85hs.svg" alt="team" />
           <h3 class="h3-undraw french">
             Entraînement de groupe :<br /><a
               class="underline"
               href="https://v-forme.fr/"
               target="_blank"
-              >V-Forme, Carcès</a
+              >V-Forme (Carcès)</a
             ><br /><a
               class="underline"
               href="https://www.facebook.com/FREE.RUN.BRIGNOLES/"
               target="_blank"
-              >Free Run, Brignoles</a
+              >Free Run (Brignoles)</a
             >
           </h3>
           <h3 class="h3-undraw english">
@@ -203,38 +209,27 @@
               class="underline"
               href="https://v-forme.fr/"
               target="_blank"
-              >V-Forme, Carcès</a
+              >V-Forme (Carcès)</a
             ><br /><a
               class="underline"
               href="https://www.facebook.com/FREE.RUN.BRIGNOLES/"
               target="_blank"
-              >Free Run, Brignoles</a
+              >Free Run (Brignoles)</a
             >
           </h3>
         </div>
       </div>
       <section class="about">
-        <a id="section-one"></a>
-        <img
-          class="logo-small"
-          src="./images/fabe-logo.png"
-          alt="Fabé logo gold on black"
-        />
+        <a id="about-me"></a>
         <h2 class="french">À propos</h2>
         <h2 class="english">About me</h2>
         <div class="socials">
-          <a href="https://www.facebook.com/fabe.dia" target="_blank"
-            ><i
-              class="fa-brands fa-square-facebook fa-xl"
-              style="color: #0765ff"
-            ></i
-          ></a>
-          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank"
-            ><i
-              class="fa-brands fa-square-instagram fa-xl"
-              style="color: #e25376"
-            ></i
-          ></a>
+          <a href="https://www.facebook.com/fabe.dia" target="_blank">
+            <i class="fa-brands fa-square-facebook fa-xl"></i>
+          </a>
+          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank">
+            <i class="fa-brands fa-square-instagram fa-xl"></i>
+          </a>
         </div>
         <div class="about-container">
           <img
@@ -243,41 +238,23 @@
             alt="Fabé tying shoe laces"
           />
           <p class="about-para french">
-            Bonjour 👋 Je m'appelle Fabé Dia et ... Lorem ipsum cras dictum nunc
-            et nisl aliquet aliquet. Nam ut nulla scelerisque, molestie turpis
-            ac, dictum mauris. Pellentesque habitant morbi tristique senectus et
-            netus et malesuada fames ac turpis egestas. Vestibulum interdum
-            aliquam nibh, at vulputate est sollicitudin vitae.<br /><br />Nam ut
-            nulla scelerisque, molestie turpis ac, dictum mauris. Pellentesque
-            habitant morbi tristique senectus et netus et malesuada fames ac
-            turpis egestas. Vestibulum interdum aliquam nibh, at vulputate est
-            sollicitudin vitae.<br /><br />Nam ut nulla scelerisque, molestie
-            Vestibulum interdum aliquam nibh, at vulputate est sollicitudin
-            vitae.<br /><br />Vous pouvez également visiter mon page de
+            Bonjour 👋 Je m'appelle Fabé Dia et ... <br /><br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi consequatur repellendus. Eligendi odit unde cupiditate! Praesentium sit sequi beatae sint accusamus nam quis! Perspiciatis hic optio impedit nihil facere.<br /><br />Vous pouvez également lire à mon sujet sur ma page 
             <a
               class="underline"
               href="https://fr.wikipedia.org/wiki/Fab%C3%A9_Dia"
               target="_blank"
               >Wikipédia.</a
-            >
+            ><br /><br />N'hésitez pas à me contacter si vous souhaitez obtenir plus d'informations sur moi et les services que je propose.
           </p>
           <p class="about-para english">
-            Hello 👋 My name is Fabé Dia and ... Lorem ipsum cras dictum nunc et
-            nisl aliquet aliquet. Nam ut nulla scelerisque, molestie turpis ac,
-            dictum mauris. Pellentesque habitant morbi tristique senectus et
-            netus et malesuada fames ac turpis egestas. Vestibulum interdum
-            aliquam nibh, at vulputate est sollicitudin vitae.<br /><br />Nam ut
-            nulla scelerisque, molestie turpis ac, dictum mauris. Pellentesque
-            habitant morbi tristique senectus et netus et malesuada fames ac
-            turpis egestas. Vestibulum interdum aliquam nibh, at vulputate est
-            sollicitudin vitae.<br />You can also visit my
+            Hello 👋 My name is Fabé Dia and ... <br /><br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi consequatur repellendus. Eligendi odit unde cupiditate! Praesentium sit sequi beatae sint accusamus nam quis! Perspiciatis hic optio impedit nihil facere.<br /><br />You can also read about me on my
             <a
               class="underline"
               href="https://en.wikipedia.org/wiki/Fab%C3%A9_Dia"
               target="_blank"
               >Wikipedia</a
             >
-            page.
+            page.<br /><br />Please don't hesitate to get in touch if you would like more information about me and the services I offer.
           </p>
         </div>
 
@@ -295,43 +272,103 @@
       <hr />
 
       <section class="services">
-        <a id="section-two"></a>
+        <a id="services"></a>
         <h2 class="french">Entraînez-vous avec moi</h2>
         <h2 class="english">Train with me</h2>
-        <p class="french">
+        <div class="undraw-container training-benefits">
+          <div>
+            <img
+              class="undraw"
+              src="./images/undraw_personal-documents_uhkq.svg"
+              alt="personalised programme"
+            />
+            <h3 class="h3-undraw french">Programme personalisée</h3>
+            <h3 class="h3-undraw english">Personalised training programme</h3>
+          </div>
+          <div>
+            <img
+              class="undraw"
+              src="./images/undraw_runner-start_585j.svg"
+              alt="runner"
+            />
+            <h3 class="h3-undraw french">
+              Améliorez votre technique de course
+            </h3>
+            <h3 class="h3-undraw english">Improve your running technique</h3>
+          </div>
+          <div>
+            <img
+              class="undraw"
+              src="./images/undraw_athletes-training_koqa.svg"
+              alt="athletes training"
+            />
+            <h3 class="h3-undraw french">Remise en forme</h3>
+            <h3 class="h3-undraw english">Get back in shape</h3>
+          </div>
+          <div>
+            <img
+              class="undraw"
+              src="./images/undraw_yoga_yy99.svg"
+              alt="yoga"
+            />
+            <h3 class="h3-undraw french">Retrouvez votre equilibre</h3>
+            <h3 class="h3-undraw english">Rediscover your balance</h3>
+          </div>
+        </div>
+        <p class="french explanation-para">
           Le quotidien est stressant, la routine métro-boulot-dodo fatiguante,
-          peu de temps pour soi. Le mouvement intégral avec Fabé est une
-          solution efficace. C'est la redécouverte de votre corps qui bouge de
-          façon naturelle et fonctionnelle allié au plaisir de prendre soin de
-          vous.<br /><br />L'entrainement se fonde sur deux principes simples.
+          peu de temps pour soi.
+          <strong>Le mouvement intégral avec Fabé</strong> est une solution
+          efficace. C'est la redécouverte de votre corps qui bouge de façon
+          naturelle et fonctionnelle allié au plaisir de prendre soin de
+          vous.<br /><br />L'entrainement se fonde sur deux principes
+          simples.<br /><br />
           Le premier est de se référer en permanence aux gestes de notre
           quotidien. Sans nous apercevoir, nous faisons travailler tous les
-          jours nos muscles en soulevant les sacs de course, en passant
+          jours nos muscles - en soulevant les sacs de course, en passant
           l’aspirateur, en montant l’escalier, en nous levant pour aller
-          chercher un dossier, en portant nos enfants ... Le mouvement intégral
-          vise donc à reproduire ces différents mouvements en les optimisant
-          pour éviter les blessures et pour développer une silhouette
-          harmonieuse, et en les rendant plus intenses et plus performants.<br /><br />Le
-          second principe est de faire travailler les chaînes musculaires dans
-          leur globalité. Au contraire des entrainements de musculation
-          classiques, dits analytiques, qui se concentrent sur un ou plusieurs
-          muscles en les isolant, le travail fonctionnel prend en compte toute
+          chercher un dossier, en portant nos enfants ...
+          <strong>Le mouvement intégral</strong> vise donc à reproduire ces
+          différents mouvements en les optimisant pour éviter les blessures et
+          pour développer une silhouette harmonieuse, et en les rendant plus
+          intenses et plus performants.<br /><br />Le second principe est de
+          faire travailler les chaînes musculaires dans leur globalité. Au
+          contraire des entrainements de musculation classiques, dits
+          analytiques, qui se concentrent sur un ou plusieurs muscles en les
+          isolant, le <strong>travail fonctionnel</strong> prend en compte toute
           la chaîne musculaire et les articulations. Le haut et le bas du corps
           travaillent en même temps et non de façon isolée. Des d’exercices sont
           complets et ludiques.
         </p>
-        <p class="english">
-          Cras dictum nunc et nisl aliquet aliquet. Nam ut nulla scelerisque,
-          molestie turpis ac, dictum mauris. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Vestibulum interdum aliquam nibh, at vulputate est sollicitudin vitae.
+        <p class="english explanation-para">
+          Everyday life is stressful, and the routine of commuting, working, and
+          sleeping can be exhausting, leaving little time for yourself.
+          <strong>Integral movement with Fabé</strong> offers an effective
+          solution. It’s about rediscovering your body, moving naturally and
+          functionally, while enjoying the process of taking care of
+          yourself.<br /><br />The training is based on two simple
+          principles.<br /><br />
+          The first is to constantly refer to the movements of our daily lives.
+          Without even realising it, we engage our muscles every day — lifting
+          shopping bags, hoovering, climbing stairs, standing up to grab a file,
+          carrying our children, and more.
+          <strong>Integral movement</strong> aims to replicate these various
+          motions, optimising them to prevent injuries, develop a harmonious
+          physique, and make them more intense and effective.<br /><br />The
+          second principle is to work the muscle chains as a whole. Unlike
+          traditional, analytical strength training, which focuses on isolating
+          one or more muscles, <strong>functional training</strong> considers
+          the entire muscle chain and the joints. Both the upper and lower body
+          work together, rather than in isolation. The exercises are
+          comprehensive, engaging, and fun.
         </p>
       </section>
       <hr />
       <section class="testimonials">
-        <a id="section-three"></a>
+        <a id="testimonials"></a>
         <h2 class="french">Témoignages</h2>
         <h2 class="english">Testimonials</h2>
+        <div class="testimonials-container">
         <div class="testimonial card">
           <div class="card-body">
             <blockquote class="blockquote mb-0">
@@ -376,15 +413,11 @@
             </blockquote>
           </div>
         </div>
+      </div>
       </section>
       <hr />
       <section class="contact">
-        <a id="section-four"></a>
-        <img
-          class="logo-small"
-          src="./images/fabe-logo.png"
-          alt="Fabé logo gold on black"
-        />
+        <a id="contact"></a>
         <h2 class>Contact</h2>
         <h2>Fabé DIA</h2>
         <h3 class="french">Appelez-moi ou envoyez-moi un message sur :</h3>
@@ -422,23 +455,17 @@
         </h3>
         <h3 class="english space-above">Or find me on social media:</h3>
         <div class="contact-socials">
-          <a href="https://www.facebook.com/fabe.dia" target="_blank"
-            ><i
-              class="fa-brands fa-square-facebook fa-xl"
-              style="color: #0765ff"
-            ></i
-          ></a>
-          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank"
-            ><i
-              class="fa-brands fa-square-instagram fa-xl"
-              style="color: #e25376"
-            ></i
-          ></a>
+          <a href="https://www.facebook.com/fabe.dia" target="_blank">
+            <i class="fa-brands fa-square-facebook fa-xl"></i>
+          </a>
+          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank">
+            <i class="fa-brands fa-square-instagram fa-xl"></i>
+          </a>
         </div>
       </section>
       <hr />
       <section class="images">
-        <a id="section-five"></a>
+        <a id="gallery"></a>
         <h2 class="french">Galerie</h2>
         <h2 class="english">Gallery</h2>
         <div class="horizontal-gallery">
