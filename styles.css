@@ -322,9 +322,7 @@ footer a {
   .undraw {
     height: 200px;
   }
-  .card-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+
   .card {
     width: 60%;
   }
@@ -356,5 +354,10 @@ footer a {
   .vertical-gallery img {
     width: 314px;
     height: 560px;
+  }
+}
+@media (min-width: 1500px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
