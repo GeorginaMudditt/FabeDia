@@ -211,6 +211,8 @@ button.english {
 .blockquote-footer {
   border-radius: 20px;
   margin-top: 2px;
+  font-size: 25px;
+  color: var(--main-color-light);
 }
 .testimonial {
   margin-bottom: 70px;
