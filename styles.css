@@ -212,11 +212,13 @@ button.english {
 }
 
 /* Testimonials Styles */
+
 .blockquote-footer {
   border-radius: 20px;
-  margin-top: 2px;
-  font-size: 25px;
   color: var(--main-color-light);
+  font-size: 25px;
+  margin-top: auto;
+  padding: 5px;
 }
 .testimonial {
   margin-bottom: 70px;
