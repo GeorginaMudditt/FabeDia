@@ -187,6 +187,7 @@ button.english {
 .about-image {
   border-radius: 20px;
   box-shadow: var(--box-shadow-heavy);
+  object-fit: cover;
   width: 80%;
 }
 .about-container {
