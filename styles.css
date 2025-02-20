@@ -365,7 +365,7 @@ footer a {
     height: 560px;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1760px) {
   .card-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
