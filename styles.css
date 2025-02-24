@@ -236,7 +236,8 @@ button.english {
   margin: 20px 0;
 }
 .horizontal-gallery img,
-iframe {
+iframe,
+video {
   border-radius: 20px;
   box-shadow: var(--box-shadow-light);
   margin: 0 auto;
