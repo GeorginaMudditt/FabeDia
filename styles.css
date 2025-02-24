@@ -368,6 +368,10 @@ footer a {
     grid-template-columns: 1fr 1fr;
   }
   .horizontal-gallery iframe,
+  .horizontal-gallery video {
+    height: 314px;
+    width: 560px;
+  }
   .horizontal-gallery img {
     height: 314px;
     width: 560px;
