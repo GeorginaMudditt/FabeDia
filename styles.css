@@ -253,6 +253,17 @@ iframe {
   margin: 0 auto;
   object-fit: cover;
 }
+.landscape {
+  width: 280px;
+  height: 157.5px;
+}
+.medals {
+  object-position: top;
+}
+.portrait {
+  height: 200px;
+  width: 157.5px;
+}
 
 /* Contact Styles */
 .contact-socials {
@@ -269,7 +280,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 20px 0;
+  padding: 40px 0;
   position: absolute;
   width: 100%;
 }
