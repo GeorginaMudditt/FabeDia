@@ -1037,29 +1037,66 @@
           return 300; // mobile: 280px + 20px
         }
 
-        galleryPhotosLeft.addEventListener("click", function (e) {
+        // Remove any existing listeners first
+        const newLeftBtn = galleryPhotosLeft.cloneNode(true);
+        galleryPhotosLeft.parentNode.replaceChild(newLeftBtn, galleryPhotosLeft);
+        const newRightBtn = galleryPhotosRight.cloneNode(true);
+        galleryPhotosRight.parentNode.replaceChild(newRightBtn, galleryPhotosRight);
+        
+        // Get fresh references after cloning
+        const leftBtn = document.getElementById("galleryPhotosLeft");
+        const rightBtn = document.getElementById("galleryPhotosRight");
+        
+        leftBtn.addEventListener("click", function (e) {
           e.preventDefault();
           e.stopPropagation();
           console.log("Left arrow clicked");
           const scrollAmount = getScrollAmount();
-          console.log("Scroll amount:", scrollAmount);
-          galleryPhotosCarousel.scrollBy({
-            left: -scrollAmount,
-            behavior: "smooth"
-          });
-        });
+          console.log("Scroll amount:", scrollAmount, "Carousel:", galleryPhotosCarousel);
+          if (galleryPhotosCarousel) {
+            galleryPhotosCarousel.scrollBy({
+              left: -scrollAmount,
+              behavior: "smooth"
+            });
+          }
+        }, false);
 
-        galleryPhotosRight.addEventListener("click", function (e) {
+        rightBtn.addEventListener("click", function (e) {
           e.preventDefault();
           e.stopPropagation();
           console.log("Right arrow clicked");
           const scrollAmount = getScrollAmount();
-          console.log("Scroll amount:", scrollAmount);
+          console.log("Scroll amount:", scrollAmount, "Carousel:", galleryPhotosCarousel);
+          if (galleryPhotosCarousel) {
+            galleryPhotosCarousel.scrollBy({
+              left: scrollAmount,
+              behavior: "smooth"
+            });
+          }
+        }, false);
+        
+        // Also try direct onclick as fallback
+        leftBtn.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log("Left onclick triggered");
+          const scrollAmount = getScrollAmount();
+          galleryPhotosCarousel.scrollBy({
+            left: -scrollAmount,
+            behavior: "smooth"
+          });
+        };
+        
+        rightBtn.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log("Right onclick triggered");
+          const scrollAmount = getScrollAmount();
           galleryPhotosCarousel.scrollBy({
             left: scrollAmount,
             behavior: "smooth"
           });
-        });
+        };
 
         // Update arrow visibility based on scroll position
         function updateGalleryArrows() {
@@ -1087,13 +1124,22 @@
         updateGalleryArrows(); // Initial check
       }
 
-      // Initialize gallery carousel
+      // Initialize gallery carousel - try multiple times to ensure it works
       initGalleryCarousel();
       
       // Also try on window load in case images weren't ready
       window.addEventListener('load', function() {
-        initGalleryCarousel();
+        setTimeout(initGalleryCarousel, 100);
       });
+      
+      // Fallback: try again after a short delay
+      setTimeout(function() {
+        if (!galleryCarouselInitialized) {
+          console.log("Retrying gallery carousel initialization...");
+          galleryCarouselInitialized = false;
+          initGalleryCarousel();
+        }
+      }, 500);
       }); // End DOMContentLoaded
     </script>
   </body>
