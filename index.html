@@ -40,7 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=23" />
+    <link rel="stylesheet" href="styles.css?v=24" />
     <title>Fabé Dia</title>
     <meta
       name="description"
@@ -814,7 +814,7 @@
         
         <!-- Photos Carousel -->
         <div class="gallery-photos-wrapper">
-          <button class="carousel-arrow carousel-arrow-left" aria-label="Scroll photos left" id="galleryPhotosLeft">
+          <button type="button" class="carousel-arrow carousel-arrow-left" aria-label="Scroll photos left" id="galleryPhotosLeft">
             <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
           </button>
           <div class="gallery-photos-container" id="galleryPhotosCarousel">
@@ -869,7 +869,7 @@
               loading="lazy"
             />
           </div>
-          <button class="carousel-arrow carousel-arrow-right" aria-label="Scroll photos right" id="galleryPhotosRight">
+          <button type="button" class="carousel-arrow carousel-arrow-right" aria-label="Scroll photos right" id="galleryPhotosRight">
             <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
           </button>
         </div>
@@ -1008,23 +1008,46 @@
       }
 
       // Gallery photos carousel navigation
-      const galleryPhotosCarousel = document.getElementById("galleryPhotosCarousel");
-      const galleryPhotosLeft = document.getElementById("galleryPhotosLeft");
-      const galleryPhotosRight = document.getElementById("galleryPhotosRight");
+      let galleryCarouselInitialized = false;
+      function initGalleryCarousel() {
+        if (galleryCarouselInitialized) return; // Prevent duplicate initialization
+        
+        const galleryPhotosCarousel = document.getElementById("galleryPhotosCarousel");
+        const galleryPhotosLeft = document.getElementById("galleryPhotosLeft");
+        const galleryPhotosRight = document.getElementById("galleryPhotosRight");
 
-      if (galleryPhotosCarousel && galleryPhotosLeft && galleryPhotosRight) {
-        // Calculate scroll amount based on photo width + gap
-        const firstPhoto = galleryPhotosCarousel.querySelector('.gallery-photo');
-        const scrollAmount = firstPhoto ? firstPhoto.offsetWidth + 20 : 300; // photo width + 20px gap
+        if (!galleryPhotosCarousel || !galleryPhotosLeft || !galleryPhotosRight) {
+          return; // Elements not ready yet
+        }
+        
+        galleryCarouselInitialized = true;
 
-        galleryPhotosLeft.addEventListener("click", function () {
+        // Function to calculate scroll amount dynamically
+        function getScrollAmount() {
+          const firstPhoto = galleryPhotosCarousel.querySelector('.gallery-photo');
+          if (firstPhoto && firstPhoto.offsetWidth > 0) {
+            return firstPhoto.offsetWidth + 20; // photo width + 20px gap
+          }
+          // Fallback values based on screen size
+          if (window.innerWidth >= 1200) return 370; // desktop: 350px + 20px
+          if (window.innerWidth >= 768) return 335; // tablet: 315px + 20px
+          return 300; // mobile: 280px + 20px
+        }
+
+        galleryPhotosLeft.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const scrollAmount = getScrollAmount();
           galleryPhotosCarousel.scrollBy({
             left: -scrollAmount,
             behavior: "smooth"
           });
         });
 
-        galleryPhotosRight.addEventListener("click", function () {
+        galleryPhotosRight.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const scrollAmount = getScrollAmount();
           galleryPhotosCarousel.scrollBy({
             left: scrollAmount,
             behavior: "smooth"
@@ -1045,6 +1068,14 @@
         galleryPhotosCarousel.addEventListener("scroll", updateGalleryArrows);
         updateGalleryArrows(); // Initial check
       }
+
+      // Initialize gallery carousel
+      initGalleryCarousel();
+      
+      // Also try on window load in case images weren't ready
+      window.addEventListener('load', function() {
+        initGalleryCarousel();
+      });
       }); // End DOMContentLoaded
     </script>
   </body>
