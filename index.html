@@ -1012,6 +1012,12 @@
       const galleryPhotosLeft = document.getElementById("galleryPhotosLeft");
       const galleryPhotosRight = document.getElementById("galleryPhotosRight");
 
+      console.log("Gallery carousel elements:", {
+        carousel: galleryPhotosCarousel,
+        left: galleryPhotosLeft,
+        right: galleryPhotosRight
+      });
+
       if (galleryPhotosCarousel && galleryPhotosLeft && galleryPhotosRight) {
         // Function to calculate scroll amount dynamically
         function getScrollAmount() {
@@ -1025,16 +1031,24 @@
           return 300; // mobile: 280px + 20px
         }
 
-        galleryPhotosLeft.addEventListener("click", function () {
+        galleryPhotosLeft.addEventListener("click", function (e) {
+          console.log("Gallery left arrow clicked", e);
+          e.preventDefault();
+          e.stopPropagation();
           const scrollAmount = getScrollAmount();
+          console.log("Scrolling left by:", scrollAmount);
           galleryPhotosCarousel.scrollBy({
             left: -scrollAmount,
             behavior: "smooth"
           });
         });
 
-        galleryPhotosRight.addEventListener("click", function () {
+        galleryPhotosRight.addEventListener("click", function (e) {
+          console.log("Gallery right arrow clicked", e);
+          e.preventDefault();
+          e.stopPropagation();
           const scrollAmount = getScrollAmount();
+          console.log("Scrolling right by:", scrollAmount);
           galleryPhotosCarousel.scrollBy({
             left: scrollAmount,
             behavior: "smooth"
@@ -1054,6 +1068,9 @@
 
         galleryPhotosCarousel.addEventListener("scroll", updateGalleryArrows);
         updateGalleryArrows(); // Initial check
+        console.log("Gallery carousel initialized successfully");
+      } else {
+        console.error("Gallery carousel elements not found!");
       }
       }); // End DOMContentLoaded
     </script>
