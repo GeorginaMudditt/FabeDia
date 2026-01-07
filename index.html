@@ -17,6 +17,7 @@
       gtag("config", "G-DXDDRVQ4M2");
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#231f20" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -39,25 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=22" />
     <title>Fabé Dia</title>
     <meta
       name="description"
@@ -86,6 +69,7 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <div class="navbar-container">
         <nav class="navbar navbar-expand-lg fixed-top">
@@ -101,6 +85,7 @@
               aria-controls="navbarNavAltMarkup"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              id="navbarToggle"
             >
               <span><i class="fa-solid fa-bars"></i></span>
             </button>
@@ -116,7 +101,8 @@
                 <a class="english nav-link" href="#testimonials"
                   >Testimonials</a
                 >
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="french nav-link" href="#contact">Contact</a>
+                <a class="english nav-link" href="#contact">Contact</a>
                 <a class="french nav-link" href="#gallery">Galerie</a>
                 <a class="english nav-link" href="#gallery">Gallery</a>
               </div>
@@ -128,39 +114,48 @@
         <img src="./images/fabe-logo.png" alt="Fabé logo" />
       </div>
       <div class="hero">
-        <h2 class="gold french">Transformez votre esprit et votre corps</h2>
-        <h2 class="gold english">Transform your mind and body</h2>
+        <h1 class="gold french">Transformez votre esprit et votre corps</h1>
+        <h1 class="gold english">Transform your mind and body</h1>
         <div class="lang-btn-container">
-          <button id="frenchBtn" class="btn-standard">Français</button>
-          <button id="englishBtn" class="btn-standard">English</button>
+          <button id="frenchBtn" class="btn-standard" aria-label="Switch to French language" aria-pressed="true">Français</button>
+          <button id="englishBtn" class="btn-standard" aria-label="Switch to English language" aria-pressed="false">English</button>
         </div>
       </div>
-      <div class="card-container">
+      <div class="card-container-wrapper">
+        <button class="carousel-arrow carousel-arrow-left" aria-label="Scroll cards left" id="carouselLeft">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div class="card-container" id="cardCarousel">
         <div class="card">
           <img
             class="card-img-top"
             src="./images/football-rethaferguson.jpg"
-            alt="Card image cap"
+            alt="Athlete performing football training exercises"
+            loading="lazy"
           />
           <div class="card-body">
-            <p class="card-text">PERFORMANCE</p>
+            <p class="french card-text">PERFORMANCE</p>
+            <p class="english card-text">PERFORMANCE</p>
           </div>
         </div>
         <div class="card">
           <img
             class="card-img-top"
             src="./images/pilates-reformer-ahmetkurt.jpg"
-            alt="Card image cap"
+            alt="Person performing exercises on Pilates reformer machine"
+            loading="lazy"
           />
           <div class="card-body">
-            <p class="card-text">PILATES REFORMER</p>
+            <p class="french card-text">PILATES REFORMER</p>
+            <p class="english card-text">PILATES REFORMER</p>
           </div>
         </div>
         <div class="card">
           <img
             class="card-img-top"
             src="./images/weight-loss-shvetsa.jpg"
-            alt="Card image cap"
+            alt="Person engaged in weight loss and fitness training"
+            loading="lazy"
           />
           <div class="card-body">
             <p class="french card-text">PERTE DE POIDS</p>
@@ -171,7 +166,8 @@
           <img
             class="card-img-top"
             src="./images/basketball-yaroslav-shuraev.jpg"
-            alt="Card image cap"
+            alt="Athlete playing basketball during training session"
+            loading="lazy"
           />
           <div class="card-body">
             <p class="french card-text">BIEN-ÊTRE PHYSIQUE ET MENTAL</p>
@@ -182,7 +178,8 @@
           <img
             class="card-img-top"
             src="./images/pregnancy-training.png"
-            alt="Card image cap"
+            alt="Pregnant woman performing safe exercise movements"
+            loading="lazy"
           />
           <div class="card-body">
             <p class="french card-text">ACTIVITÉS PHYSIQUE ADAPTÉS</p>
@@ -193,17 +190,20 @@
           <img
             class="card-img-top"
             src="./images/stretching-rethaferguson.jpg"
-            alt="Card image cap"
+            alt="Person performing stretching exercises for flexibility"
+            loading="lazy"
           />
           <div class="card-body">
-            <p class="card-text">STRETCHING</p>
+            <p class="french card-text">STRETCHING</p>
+            <p class="english card-text">STRETCHING</p>
           </div>
         </div>
         <div class="card">
           <img
             class="card-img-top"
             src="./images/musculation-kampus.jpg"
-            alt="Card image cap"
+            alt="Person performing muscle strengthening exercises with weights"
+            loading="lazy"
           />
           <div class="card-body">
             <p class="french card-text">RENFORCEMENT MUSCULAIRE</p>
@@ -214,15 +214,21 @@
           <img
             class="card-img-top"
             src="./images/pilates-mat-koolshooters.jpg"
-            alt="Card image cap"
+            alt="Person performing Pilates exercises on a mat"
+            loading="lazy"
           />
           <div class="card-body">
-            <p class="card-text">PILATES MAT</p>
+            <p class="french card-text">PILATES MAT</p>
+            <p class="english card-text">PILATES MAT</p>
           </div>
         </div>
+        <button class="carousel-arrow carousel-arrow-right" aria-label="Scroll cards right" id="carouselRight">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
       </div>
     </header>
-    <main>
+    <main id="main-content">
       <div class="undraw-container">
         <div>
           <img
@@ -303,18 +309,19 @@
         <h2 class="french gap-top">À propos</h2>
         <h2 class="english gap-top">About me</h2>
         <div class="socials">
-          <a href="https://www.facebook.com/fabe.dia" target="_blank">
-            <i class="fa-brands fa-square-facebook fa-xl"></i>
+          <a href="https://www.facebook.com/fabe.dia" target="_blank" aria-label="Visit Fabé Dia's Facebook page">
+            <i class="fa-brands fa-square-facebook fa-xl" aria-hidden="true"></i>
           </a>
-          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank">
-            <i class="fa-brands fa-square-instagram fa-xl"></i>
+          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank" aria-label="Visit Fabé Dia's Instagram page">
+            <i class="fa-brands fa-square-instagram fa-xl" aria-hidden="true"></i>
           </a>
         </div>
         <div class="about-container">
           <img
             class="about-image img-fluid"
             src="./images/fabe2.jpg"
-            alt="Fabé"
+            alt="Fabé Dia, Olympic athlete and sports coach"
+            loading="lazy"
           />
           <p class="about-para french">
             Je suis Fabé Dia, coach sportif et ancienne athlète de haut niveau
@@ -365,16 +372,8 @@
           </p>
         </div>
 
-        <button
-          class="french btn-standard btn-color contact-btn about-contact-btn"
-        >
-          <a href="mailto:diafabe14@gmail.com">Contactez-moi</a>
-        </button>
-        <button
-          class="english btn-standard btn-color contact-btn about-contact-btn"
-        >
-          <a href="mailto:diafabe14@gmail.com">Contact me</a>
-        </button>
+        <a href="mailto:diafabe14@gmail.com" class="french btn-standard btn-color contact-btn about-contact-btn">Contactez-moi</a>
+        <a href="mailto:diafabe14@gmail.com" class="english btn-standard btn-color contact-btn about-contact-btn">Contact me</a>
       </section>
       <hr />
 
@@ -553,8 +552,7 @@
         <a id="testimonials"></a>
         <h2 class="french gap-top">Témoignages</h2>
         <h2 class="english gap-top">Testimonials</h2>
-        <div class="testimonials-container">
-          <div class="testimonial card">
+        <div class="testimonial card">
             <div class="card-body">
               <blockquote class="blockquote mb-0">
                 <p class="french">
@@ -762,7 +760,6 @@
               </blockquote>
             </div>
           </div>
-        </div>
       </section>
       <hr />
       <section class="contact">
@@ -774,12 +771,8 @@
         <h3>+33 781 77 40 97</h3>
         <h3 class="french space-above">Envoyez-moi un e-mail :</h3>
         <h3 class="english space-above">Send me an email :</h3>
-        <button class="french btn-standard btn-color contact-btn">
-          <a href="mailto:diafabe14@gmail.com">E-mail Fabé</a>
-        </button>
-        <button class="english btn-standard btn-color contact-btn">
-          <a href="mailto:diafabe14@gmail.com">Email Fabé</a>
-        </button>
+        <a href="mailto:diafabe14@gmail.com" class="french btn-standard btn-color contact-btn">E-mail Fabé</a>
+        <a href="mailto:diafabe14@gmail.com" class="english btn-standard btn-color contact-btn">Email Fabé</a>
         <h3 class="french space-above">
           Rendez-moi visite dans mon studio (uniquement sur rendez-vous) à<br />
           1 Avenue Henri Buzzegoli, 83170 Brignoles :
@@ -791,12 +784,12 @@
         <div class="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5110.342790921619!2d6.068922875543465!3d43.405689468404866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c94206c3c635c3%3A0x45bddc584aa55d1!2s1%20Av.%20Henri%20Buzzegoli%2C%2083170%20Brignoles!5e1!3m2!1sen!2sfr!4v1737630887926!5m2!1sen!2sfr"
-            width="280"
-            height="157.5"
+            class="responsive-iframe"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            title="Map showing Fabé Dia's studio location at 1 Avenue Henri Buzzegoli, 83170 Brignoles"
           ></iframe>
         </div>
         <h3 class="french space-above">
@@ -804,11 +797,11 @@
         </h3>
         <h3 class="english space-above">Or find me on social media:</h3>
         <div class="contact-socials">
-          <a href="https://www.facebook.com/fabe.dia" target="_blank">
-            <i class="fa-brands fa-square-facebook fa-xl"></i>
+          <a href="https://www.facebook.com/fabe.dia" target="_blank" aria-label="Visit Fabé Dia's Facebook page">
+            <i class="fa-brands fa-square-facebook fa-xl" aria-hidden="true"></i>
           </a>
-          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank">
-            <i class="fa-brands fa-square-instagram fa-xl"></i>
+          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank" aria-label="Visit Fabé Dia's Instagram page">
+            <i class="fa-brands fa-square-instagram fa-xl" aria-hidden="true"></i>
           </a>
         </div>
       </section>
@@ -817,91 +810,93 @@
         <a id="gallery"></a>
         <h2 class="french gap-top">Galerie</h2>
         <h2 class="english gap-top">Gallery</h2>
-        <div class="horizontal-gallery">
-          <!-- <video min-width="280" min-height="157.5" controls>
-            <source src="./images/Portrait-FabéDia.mp4" type="video/mp4" />
-          </video> -->
-          <iframe
-            width="280"
-            height="157.5"
-            src="https://www.youtube.com/embed/xC5StTlrY0c?si=0R4RZNz43QSUtzxT"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            width="280"
-            height="157.5"
-            src="https://www.youtube.com/embed/UJKHEMr1ssY?si=szgU3Ct01AVG1kzZ"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-
-          <img
-            class="landscape"
-            src="./images/fabe6group.jpg"
-            alt="Fabé with a training group"
-          />
-          <!-- <img
-            class="medals landscape"
-            src="./images/gold-medal.jpg"
-            alt="Fabé with medal winning team"
-          /> -->
-          <img
-            class="landscape"
-            src="./images/fabe14.jpg"
-            alt="Fabé carrying Olympic torch"
-          />
+        
+        <!-- Photos Carousel -->
+        <div class="gallery-photos-wrapper">
+          <button class="carousel-arrow carousel-arrow-left" aria-label="Scroll photos left" id="galleryPhotosLeft">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="gallery-photos-container" id="galleryPhotosCarousel">
+            <img
+              class="gallery-photo"
+              src="./images/fabe6group.jpg"
+              alt="Fabé with a training group"
+              loading="lazy"
+            />
+            <img
+              class="gallery-photo"
+              src="./images/fabe14.jpg"
+              alt="Fabé carrying Olympic torch"
+              loading="lazy"
+            />
+            <img
+              class="gallery-photo"
+              src="./images/v-forme-training.jpeg"
+              alt="Fabé training male client"
+              loading="lazy"
+            />
+            <img
+              class="gallery-photo"
+              src="./images/v-forme-training-female.jpeg"
+              alt="Fabé training female client"
+              loading="lazy"
+            />
+            <img
+              class="gallery-photo"
+              src="./images/fabe10.jpg"
+              alt="Fabé demonstrating exercise equipment"
+              loading="lazy"
+            />
+            <img class="gallery-photo" src="./images/fabe8.jpg" alt="Fabé running during training" loading="lazy" />
+            <img
+              class="gallery-photo"
+              src="./images/fabe9.jpg"
+              alt="Fabé being interviewed"
+              loading="lazy"
+            />
+            <img
+              class="gallery-photo"
+              src="./images/wall-training.jpeg"
+              alt="Fabé demonstrating wall training exercises"
+              loading="lazy"
+            />
+            <img class="gallery-photo" src="./images/fabe16.jpg" alt="Fabé smiling" loading="lazy" />
+            <img
+              class="gallery-photo"
+              src="./images/fabe15.jpg"
+              alt="Fabé performing stretching exercises"
+              loading="lazy"
+            />
+          </div>
+          <button class="carousel-arrow carousel-arrow-right" aria-label="Scroll photos right" id="galleryPhotosRight">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
         </div>
-        <div class="vertical-gallery">
-          <img
-            class="portrait"
-            src="./images/v-forme-training.jpeg"
-            alt="Fabé training male"
-          />
-          <img
-            class="portrait"
-            src="./images/v-forme-training-female.jpeg"
-            alt="Fabé training female"
-          />
 
-          <img
-            class="portrait"
-            src="./images/fabe10.jpg"
-            alt="Fabé demonstrating equipment"
-          />
-          <img class="portrait" src="./images/fabe8.jpg" alt="Fabé running" />
-          <img
-            class="portrait"
-            src="./images/fabe9.jpg"
-            alt="Fabé interviewing"
-          />
-          <img
-            class="portrait"
-            src="./images/wall-training.jpeg"
-            alt="Fabé sitting"
-          />
-
-          <img class="portrait" src="./images/fabe16.jpg" alt="Fabé smiling" />
-          <img
-            class="portrait"
-            src="./images/fabe15.jpg"
-            alt="Fabé stretching"
-          />
+        <!-- Videos Section -->
+        <div class="gallery-videos">
+          <iframe
+            class="responsive-iframe youtube-iframe gallery-video"
+            src="https://www.youtube.com/embed/xC5StTlrY0c?si=0R4RZNz43QSUtzxT"
+            title="YouTube video player - Fabé Dia training video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+          <iframe
+            class="responsive-iframe youtube-iframe gallery-video"
+            src="https://www.youtube.com/embed/UJKHEMr1ssY?si=szgU3Ct01AVG1kzZ"
+            title="YouTube video player - Fabé Dia training video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
         </div>
       </section>
-      <h3 class="varstar-pub">
-        Site web conçu avec amour par
-        <a class="underline" href="https://varstar-web.com/" target="_blank"
-          >Varstar</a
-        >
-        ⭐️
-      </h3>
     </main>
     <footer>
       <a href="https://www.facebook.com/fabe.dia/" target="_blank"
@@ -917,15 +912,26 @@
       >
     </footer>
     <script>
+      // Language switching functionality
       document
         .getElementById("frenchBtn")
         .addEventListener("click", function () {
           document.querySelectorAll(".french").forEach(function (element) {
-            element.style.display = "block";
+            // Override any inline styles to show French elements
+            if (element.classList.contains("btn-standard") || element.classList.contains("btn-color")) {
+              element.style.setProperty("display", "inline-block", "important");
+            } else if (element.classList.contains("nav-link")) {
+              element.style.setProperty("display", "block", "important");
+            } else {
+              element.style.setProperty("display", "block", "important");
+            }
           });
           document.querySelectorAll(".english").forEach(function (element) {
-            element.style.display = "none";
+            element.style.setProperty("display", "none", "important");
           });
+          document.documentElement.lang = "fr";
+          document.getElementById("frenchBtn").setAttribute("aria-pressed", "true");
+          document.getElementById("englishBtn").setAttribute("aria-pressed", "false");
         });
       document
         .getElementById("englishBtn")
@@ -934,9 +940,106 @@
             element.style.display = "none";
           });
           document.querySelectorAll(".english").forEach(function (element) {
-            element.style.display = "block";
+            // Override the !important CSS rule with inline style
+            if (element.classList.contains("btn-standard") || element.classList.contains("btn-color")) {
+              element.style.setProperty("display", "inline-block", "important");
+            } else if (element.classList.contains("nav-link")) {
+              element.style.setProperty("display", "block", "important");
+            } else {
+              element.style.setProperty("display", "block", "important");
+            }
+          });
+          document.documentElement.lang = "en";
+          document.getElementById("frenchBtn").setAttribute("aria-pressed", "false");
+          document.getElementById("englishBtn").setAttribute("aria-pressed", "true");
+        });
+
+      // Handle navbar toggle aria-expanded
+      const navbarToggle = document.getElementById("navbarToggle");
+      const navbarCollapse = document.getElementById("navbarNavAltMarkup");
+      
+      if (navbarToggle && navbarCollapse) {
+        navbarCollapse.addEventListener("shown.bs.collapse", function () {
+          navbarToggle.setAttribute("aria-expanded", "true");
+        });
+        navbarCollapse.addEventListener("hidden.bs.collapse", function () {
+          navbarToggle.setAttribute("aria-expanded", "false");
+        });
+      }
+
+      // Carousel navigation
+      const carousel = document.getElementById("cardCarousel");
+      const leftArrow = document.getElementById("carouselLeft");
+      const rightArrow = document.getElementById("carouselRight");
+
+      if (carousel && leftArrow && rightArrow) {
+        const scrollAmount = 240; // Card width + gap
+
+        leftArrow.addEventListener("click", function () {
+          carousel.scrollBy({
+            left: -scrollAmount,
+            behavior: "smooth"
           });
         });
+
+        rightArrow.addEventListener("click", function () {
+          carousel.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth"
+          });
+        });
+
+        // Update arrow visibility based on scroll position
+        function updateArrows() {
+          const isAtStart = carousel.scrollLeft <= 0;
+          const isAtEnd = carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 10;
+          
+          leftArrow.style.opacity = isAtStart ? "0.3" : "1";
+          leftArrow.style.pointerEvents = isAtStart ? "none" : "auto";
+          rightArrow.style.opacity = isAtEnd ? "0.3" : "1";
+          rightArrow.style.pointerEvents = isAtEnd ? "none" : "auto";
+        }
+
+        carousel.addEventListener("scroll", updateArrows);
+        updateArrows(); // Initial check
+      }
+
+      // Gallery photos carousel navigation
+      const galleryPhotosCarousel = document.getElementById("galleryPhotosCarousel");
+      const galleryPhotosLeft = document.getElementById("galleryPhotosLeft");
+      const galleryPhotosRight = document.getElementById("galleryPhotosRight");
+
+      if (galleryPhotosCarousel && galleryPhotosLeft && galleryPhotosRight) {
+        const scrollAmount = 210; // Photo width + gap (reduced by 30%)
+
+        galleryPhotosLeft.addEventListener("click", function () {
+          galleryPhotosCarousel.scrollBy({
+            left: -scrollAmount,
+            behavior: "smooth"
+          });
+        });
+
+        galleryPhotosRight.addEventListener("click", function () {
+          galleryPhotosCarousel.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth"
+          });
+        });
+
+        // Update arrow visibility based on scroll position
+        function updateGalleryArrows() {
+          const isAtStart = galleryPhotosCarousel.scrollLeft <= 0;
+          const isAtEnd = galleryPhotosCarousel.scrollLeft >= galleryPhotosCarousel.scrollWidth - galleryPhotosCarousel.clientWidth - 10;
+          
+          galleryPhotosLeft.style.opacity = isAtStart ? "0.3" : "1";
+          galleryPhotosLeft.style.pointerEvents = isAtStart ? "none" : "auto";
+          galleryPhotosRight.style.opacity = isAtEnd ? "0.3" : "1";
+          galleryPhotosRight.style.pointerEvents = isAtEnd ? "none" : "auto";
+        }
+
+        galleryPhotosCarousel.addEventListener("scroll", updateGalleryArrows);
+        updateGalleryArrows(); // Initial check
+      }
     </script>
   </body>
 </html>
