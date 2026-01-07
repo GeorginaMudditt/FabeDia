@@ -40,7 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=24" />
+    <link rel="stylesheet" href="styles.css?v=25" />
     <title>Fabé Dia</title>
     <meta
       name="description"
@@ -1017,10 +1017,13 @@
         const galleryPhotosRight = document.getElementById("galleryPhotosRight");
 
         if (!galleryPhotosCarousel || !galleryPhotosLeft || !galleryPhotosRight) {
+          console.log("Gallery carousel elements not found, retrying...");
+          setTimeout(initGalleryCarousel, 100);
           return; // Elements not ready yet
         }
         
         galleryCarouselInitialized = true;
+        console.log("Gallery carousel initialized");
 
         // Function to calculate scroll amount dynamically
         function getScrollAmount() {
@@ -1037,7 +1040,9 @@
         galleryPhotosLeft.addEventListener("click", function (e) {
           e.preventDefault();
           e.stopPropagation();
+          console.log("Left arrow clicked");
           const scrollAmount = getScrollAmount();
+          console.log("Scroll amount:", scrollAmount);
           galleryPhotosCarousel.scrollBy({
             left: -scrollAmount,
             behavior: "smooth"
@@ -1047,7 +1052,9 @@
         galleryPhotosRight.addEventListener("click", function (e) {
           e.preventDefault();
           e.stopPropagation();
+          console.log("Right arrow clicked");
           const scrollAmount = getScrollAmount();
+          console.log("Scroll amount:", scrollAmount);
           galleryPhotosCarousel.scrollBy({
             left: scrollAmount,
             behavior: "smooth"
@@ -1059,10 +1066,21 @@
           const isAtStart = galleryPhotosCarousel.scrollLeft <= 0;
           const isAtEnd = galleryPhotosCarousel.scrollLeft >= galleryPhotosCarousel.scrollWidth - galleryPhotosCarousel.clientWidth - 10;
           
-          galleryPhotosLeft.style.opacity = isAtStart ? "0.3" : "1";
-          galleryPhotosLeft.style.pointerEvents = isAtStart ? "none" : "auto";
-          galleryPhotosRight.style.opacity = isAtEnd ? "0.3" : "1";
-          galleryPhotosRight.style.pointerEvents = isAtEnd ? "none" : "auto";
+          if (isAtStart) {
+            galleryPhotosLeft.style.opacity = "0.3";
+            galleryPhotosLeft.style.pointerEvents = "none";
+          } else {
+            galleryPhotosLeft.style.opacity = "1";
+            galleryPhotosLeft.style.pointerEvents = "auto";
+          }
+          
+          if (isAtEnd) {
+            galleryPhotosRight.style.opacity = "0.3";
+            galleryPhotosRight.style.pointerEvents = "none";
+          } else {
+            galleryPhotosRight.style.opacity = "1";
+            galleryPhotosRight.style.pointerEvents = "auto";
+          }
         }
 
         galleryPhotosCarousel.addEventListener("scroll", updateGalleryArrows);
