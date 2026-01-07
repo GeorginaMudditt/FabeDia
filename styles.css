@@ -527,13 +527,14 @@ button.english {
   height: 50px;
   font-size: 24px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 100 !important;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: var(--box-shadow-light);
   opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .gallery-photos-wrapper .carousel-arrow:hover {
@@ -564,6 +565,8 @@ button.english {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  position: relative;
+  z-index: 1;
 }
 
 .gallery-photos-container::-webkit-scrollbar {

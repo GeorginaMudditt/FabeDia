@@ -1061,9 +1061,10 @@
           const isAtEnd = galleryPhotosCarousel.scrollLeft >= galleryPhotosCarousel.scrollWidth - galleryPhotosCarousel.clientWidth - 10;
           
           galleryPhotosLeft.style.opacity = isAtStart ? "0.3" : "1";
-          galleryPhotosLeft.style.pointerEvents = isAtStart ? "none" : "auto";
+          // Don't disable pointer-events, just make it visually disabled
+          galleryPhotosLeft.style.cursor = isAtStart ? "not-allowed" : "pointer";
           galleryPhotosRight.style.opacity = isAtEnd ? "0.3" : "1";
-          galleryPhotosRight.style.pointerEvents = isAtEnd ? "none" : "auto";
+          galleryPhotosRight.style.cursor = isAtEnd ? "not-allowed" : "pointer";
         }
 
         galleryPhotosCarousel.addEventListener("scroll", updateGalleryArrows);
