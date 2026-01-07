@@ -1104,19 +1104,19 @@
           const isAtEnd = galleryPhotosCarousel.scrollLeft >= galleryPhotosCarousel.scrollWidth - galleryPhotosCarousel.clientWidth - 10;
           
           if (isAtStart) {
-            galleryPhotosLeft.style.opacity = "0.3";
-            galleryPhotosLeft.style.pointerEvents = "none";
+            leftBtn.style.opacity = "0.3";
+            leftBtn.style.pointerEvents = "none";
           } else {
-            galleryPhotosLeft.style.opacity = "1";
-            galleryPhotosLeft.style.pointerEvents = "auto";
+            leftBtn.style.opacity = "1";
+            leftBtn.style.pointerEvents = "auto";
           }
           
           if (isAtEnd) {
-            galleryPhotosRight.style.opacity = "0.3";
-            galleryPhotosRight.style.pointerEvents = "none";
+            rightBtn.style.opacity = "0.3";
+            rightBtn.style.pointerEvents = "none";
           } else {
-            galleryPhotosRight.style.opacity = "1";
-            galleryPhotosRight.style.pointerEvents = "auto";
+            rightBtn.style.opacity = "1";
+            rightBtn.style.pointerEvents = "auto";
           }
         }
 
