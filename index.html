@@ -17,7 +17,7 @@
       gtag("config", "G-DXDDRVQ4M2");
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#231f20" />
+    <meta name="theme-color" content="#e2398c" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -40,7 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=25" />
+    <link rel="stylesheet" href="styles.css?v=41" />
     <title>Fabé Dia</title>
     <meta
       name="description"
@@ -65,7 +65,7 @@
     <meta property="og:site_name" content="Fabé Dia" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="./images/favicon.png?v=3" type="image/png" />
   </head>
 
   <body>
@@ -74,9 +74,9 @@
       <div class="navbar-container">
         <nav class="navbar navbar-expand-lg fixed-top">
           <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html"
-              ><strong>Fabé Dia</strong></a
-            >
+            <a class="navbar-brand" href="./index.html">
+              <img src="./images/navbar-wordmark.png" alt="Fabé Dia" />
+            </a>
             <button
               class="navbar-toggler"
               type="button"
@@ -111,11 +111,11 @@
         </nav>
       </div>
       <div class="logo">
-        <img src="./images/fabe-logo.png" alt="Fabé logo" />
+        <img src="./images/studio-logo-fuchsia.jpg" alt="Fabé Dia studio" />
       </div>
       <div class="hero">
-        <h1 class="gold french">Transformez votre esprit et votre corps</h1>
-        <h1 class="gold english">Transform your mind and body</h1>
+        <h1 class="hero-title french">Transformez votre esprit et votre corps</h1>
+        <h1 class="hero-title english">Transform your mind and body</h1>
         <div class="lang-btn-container">
           <button id="frenchBtn" class="btn-standard" aria-label="Switch to French language" aria-pressed="true">Français</button>
           <button id="englishBtn" class="btn-standard" aria-label="Switch to English language" aria-pressed="false">English</button>
@@ -237,11 +237,20 @@
             alt="personal trainer"
           />
           <h3 class="h3-undraw french">
-            Coaching chez moi :<br />
-            Studio Brignoles
+            Coaching chez moi :<br /><a
+              class="underline"
+              href="https://www.google.com/maps/search/?api=1&query=Fab%C3%A9+dia+Studio+Brignoles"
+              target="_blank"
+              >Fabé Dia Studio</a
+            >
           </h3>
           <h3 class="h3-undraw english">
-            Coaching at my studio in Brignoles
+            Coaching at my studio:<br /><a
+              class="underline"
+              href="https://www.google.com/maps/search/?api=1&query=Fab%C3%A9+dia+Studio+Brignoles"
+              target="_blank"
+              >Fabé Dia Studio</a
+            >
           </h3>
         </div>
         <div>
@@ -296,14 +305,6 @@
         <a id="about-me"></a>
         <h2 class="french gap-top">À propos</h2>
         <h2 class="english gap-top">About me</h2>
-        <div class="socials">
-          <a href="https://www.facebook.com/fabe.dia" target="_blank" aria-label="Visit Fabé Dia's Facebook page">
-            <i class="fa-brands fa-square-facebook fa-xl" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/fabedia_coaching/" target="_blank" aria-label="Visit Fabé Dia's Instagram page">
-            <i class="fa-brands fa-square-instagram fa-xl" aria-hidden="true"></i>
-          </a>
-        </div>
         <div class="about-container">
           <img
             class="about-image img-fluid"
@@ -311,6 +312,15 @@
             alt="Fabé Dia, Olympic athlete and sports coach"
             loading="lazy"
           />
+          <div class="about-copy">
+            <div class="socials">
+              <a href="https://www.facebook.com/fabe.dia" target="_blank" aria-label="Visit Fabé Dia's Facebook page">
+                <i class="fa-brands fa-square-facebook fa-xl" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/fabedia_coaching/" target="_blank" aria-label="Visit Fabé Dia's Instagram page">
+                <i class="fa-brands fa-square-instagram fa-xl" aria-hidden="true"></i>
+              </a>
+            </div>
           <p class="about-para french">
             Je suis Fabé Dia, coach sportif et ancienne athlète de haut niveau
             ayant participé à deux Jeux Olympiques en athlétisme.<br /><br />Forte
@@ -358,18 +368,19 @@
             page.<br /><br />Please don't hesitate to get in touch if you would
             like more information about me and the services I offer.
           </p>
+          </div>
         </div>
 
-        <a href="mailto:diafabe14@gmail.com" class="french btn-standard btn-color contact-btn about-contact-btn">Contactez-moi</a>
-        <a href="mailto:diafabe14@gmail.com" class="english btn-standard btn-color contact-btn about-contact-btn">Contact me</a>
+        <a href="mailto:studiofabedia@gmail.com" class="french btn-standard btn-color contact-btn about-contact-btn">Contactez-moi</a>
+        <a href="mailto:studiofabedia@gmail.com" class="english btn-standard btn-color contact-btn about-contact-btn">Contact me</a>
       </section>
       <hr />
 
       <section class="services">
         <a id="services"></a>
-        <h2 class="french gap-top">Entraînez-vous avec moi</h2>
-        <h2 class="english gap-top">Train with me</h2>
         <div class="undraw-container training-benefits">
+          <h2 class="french gap-top">Entraînez-vous avec moi</h2>
+          <h2 class="english gap-top">Train with me</h2>
           <div>
             <img
               class="undraw"
@@ -444,26 +455,20 @@
           bienfaits du renforcement musculaire sur la
           <strong>santé générale</strong> des individus sont nombreux:
         </p>
-        <p class="french explanation-para">
-          - Meilleure santé cardio-vasculaire
-        </p>
-        <p class="french explanation-para">
-          - Diminution des douleurs dorsales
-        </p>
-        <p class="french explanation-para">
-          - Meilleure densité osseuse (prévention de l’ostéoporose)
-        </p>
-        <p class="french explanation-para">
-          - Perte de poids : Un entrainement en résistance va déclencher
-          différents mécanismes physiologiques qui peuvent grandement contribuer
-          à la perte de masse grasse. Associé à un régime diététique, il
-          accélère le processus de perte de poids. Le renforcement musculaire
-          entraîne une élévation de la dépense énergétique, et donc de bruler
-          davantage de calories même au repos.
-        </p>
-        <p class="french explanation-para">
-          - On donne du galbe à la silhouette !
-        </p>
+        <ul class="benefit-list french">
+          <li>Meilleure santé cardio-vasculaire</li>
+          <li>Diminution des douleurs dorsales</li>
+          <li>Meilleure densité osseuse (prévention de l’ostéoporose)</li>
+          <li>
+            Perte de poids : Un entrainement en résistance va déclencher
+            différents mécanismes physiologiques qui peuvent grandement contribuer
+            à la perte de masse grasse. Associé à un régime diététique, il
+            accélère le processus de perte de poids. Le renforcement musculaire
+            entraîne une élévation de la dépense énergétique, et donc de bruler
+            davantage de calories même au repos.
+          </li>
+          <li>On donne du galbe à la silhouette !</li>
+        </ul>
 
         <p class="french explanation-para">
           Les activités de <strong>stretching</strong> et de
@@ -508,21 +513,19 @@
           injuries.<br /><br />Beyond sports practice, the benefits of muscle
           strengthening on <strong>overall health</strong> are numerous:
         </p>
-        <p class="english explanation-para">- Better cardiovascular health</p>
-        <p class="english explanation-para">- Reduction of back pain</p>
-        <p class="english explanation-para">
-          - Improved bone density (prevention of osteoporosis)
-        </p>
-        <p class="english explanation-para">
-          - Weight loss: Resistance training triggers various physiological
-          mechanisms that can greatly contribute to fat loss. When combined with
-          a proper diet, it accelerates the weight loss process. Muscle
-          strengthening increases energy expenditure, leading to more calories
-          burned, even at rest.
-        </p>
-        <p class="english explanation-para">
-          - It enhances the body's shape and definition!
-        </p>
+        <ul class="benefit-list english">
+          <li>Better cardiovascular health</li>
+          <li>Reduction of back pain</li>
+          <li>Improved bone density (prevention of osteoporosis)</li>
+          <li>
+            Weight loss: Resistance training triggers various physiological
+            mechanisms that can greatly contribute to fat loss. When combined with
+            a proper diet, it accelerates the weight loss process. Muscle
+            strengthening increases energy expenditure, leading to more calories
+            burned, even at rest.
+          </li>
+          <li>It enhances the body's shape and definition!</li>
+        </ul>
         <p class="english explanation-para">
           <strong>Stretching</strong> and <strong>Pilates</strong> activities
           complement muscle strengthening and all other types of sports
@@ -535,11 +538,15 @@
           passive.
         </p>
       </section>
-      <hr />
       <section class="testimonials">
         <a id="testimonials"></a>
         <h2 class="french gap-top">Témoignages</h2>
         <h2 class="english gap-top">Testimonials</h2>
+        <div class="testimonial-carousel">
+          <button type="button" class="carousel-arrow carousel-arrow-left" aria-label="Previous testimonial" id="testimonialLeft">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="testimonial-track" id="testimonialCarousel">
         <div class="testimonial card">
             <div class="card-body">
               <blockquote class="blockquote mb-0">
@@ -748,19 +755,26 @@
               </blockquote>
             </div>
           </div>
+          </div>
+          <button type="button" class="carousel-arrow carousel-arrow-right" aria-label="Next testimonial" id="testimonialRight">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
       </section>
       <hr />
       <section class="contact">
         <a id="contact"></a>
         <h2 class="gap-top">Contact</h2>
         <h2>Fabé DIA</h2>
+        <div class="contact-split">
+        <div class="contact-details">
         <h3 class="french">Appelez-moi ou envoyez-moi un message sur :</h3>
         <h3 class="english">Call or send me a message on:</h3>
         <h3>+33 781 77 40 97</h3>
         <h3 class="french space-above">Envoyez-moi un e-mail :</h3>
         <h3 class="english space-above">Send me an email :</h3>
-        <a href="mailto:diafabe14@gmail.com" class="french btn-standard btn-color contact-btn">E-mail Fabé</a>
-        <a href="mailto:diafabe14@gmail.com" class="english btn-standard btn-color contact-btn">Email Fabé</a>
+        <a href="mailto:studiofabedia@gmail.com" class="french btn-standard btn-color contact-btn">E-mail Fabé</a>
+        <a href="mailto:studiofabedia@gmail.com" class="english btn-standard btn-color contact-btn">Email Fabé</a>
         <h3 class="french space-above">
           Rendez-moi visite dans mon studio (uniquement sur rendez-vous) à<br />
           270 Av Adjudant Chef Marie Louis Broquier, 83170 Brignoles (entre Delko et les avocats)
@@ -769,6 +783,19 @@
           Visit me in my studio (with appointments only) at:<br />
           270 Av Adjudant Chef Marie Louis Broquier, 83170 Brignoles (between Delko and the lawyers)
         </h3>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11594.03054445368!2d6.018737287158212!3d43.408219499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c969f18af3ddcf%3A0x1a6f0151a49ddef3!2sFab%C3%A9%20dia%20Studio!5e0!3m2!1sen!2sfr!4v1794572349283!5m2!1sen!2sfr"
+            class="responsive-iframe"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Map showing Fabé Dia Studio"
+          ></iframe>
+        </div>
+        </div>
         <h3 class="french space-above">
           Ou retrouvez-moi sur les réseaux sociaux :
         </h3>
@@ -983,6 +1010,41 @@
         updateArrows(); // Initial check
       }
 
+      const testimonialCarousel = document.getElementById("testimonialCarousel");
+      const testimonialLeft = document.getElementById("testimonialLeft");
+      const testimonialRight = document.getElementById("testimonialRight");
+
+      if (testimonialCarousel && testimonialLeft && testimonialRight) {
+        function testimonialStep() {
+          const card = testimonialCarousel.querySelector(".testimonial");
+          if (!card) return 320;
+          const gap = parseFloat(getComputedStyle(testimonialCarousel).columnGap) || 20;
+          return card.getBoundingClientRect().width + gap;
+        }
+
+        testimonialLeft.addEventListener("click", function (e) {
+          e.preventDefault();
+          testimonialCarousel.scrollBy({ left: -testimonialStep(), behavior: "smooth" });
+        });
+
+        testimonialRight.addEventListener("click", function (e) {
+          e.preventDefault();
+          testimonialCarousel.scrollBy({ left: testimonialStep(), behavior: "smooth" });
+        });
+
+        function updateTestimonialArrows() {
+          const atStart = testimonialCarousel.scrollLeft <= 2;
+          const atEnd = testimonialCarousel.scrollLeft >= testimonialCarousel.scrollWidth - testimonialCarousel.clientWidth - 4;
+          testimonialLeft.style.opacity = atStart ? "0.35" : "1";
+          testimonialLeft.style.pointerEvents = atStart ? "none" : "auto";
+          testimonialRight.style.opacity = atEnd ? "0.35" : "1";
+          testimonialRight.style.pointerEvents = atEnd ? "none" : "auto";
+        }
+
+        testimonialCarousel.addEventListener("scroll", updateTestimonialArrows);
+        updateTestimonialArrows();
+      }
+
       // Gallery photos carousel navigation (matching the working card carousel structure)
       const galleryPhotosCarousel = document.getElementById("galleryPhotosCarousel");
       const galleryPhotosLeft = document.getElementById("galleryPhotosLeft");
@@ -1048,6 +1110,30 @@
         console.log("Gallery carousel initialized successfully");
       } else {
         console.error("Gallery carousel elements not found!");
+      }
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduceMotion) {
+        const revealNodes = document.querySelectorAll(
+          ".logo, .hero, .card-container-wrapper, .undraw-container > div, .about, .services, .contact, .images"
+        );
+        revealNodes.forEach(function (node) {
+          node.classList.add("reveal");
+        });
+        const revealObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-in");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+        revealNodes.forEach(function (node) {
+          revealObserver.observe(node);
+        });
       }
       }); // End DOMContentLoaded
     </script>
